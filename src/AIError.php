@@ -24,6 +24,25 @@ class AIError
     /** @var Transport */
     private static $transport;
 
+    /**
+     * Initialize the AI Error SDK.
+     *
+     * This method must be called once at application bootstrap.
+     *
+     * @param array{
+     *     projectKey?: string,
+     *     env?: string,
+     *     apiUrl?: string,
+     *     debug?: bool
+     * } $config Configuration array:
+     *
+     * - projectKey: Required. Your AI Error project key (string)
+     * - env: The environment name ("dev", "stage", "prod", etc.)
+     * - apiUrl: Required. The API endpoint to send error logs to.
+     * - debug: Enable SDK debug logging (true/false)
+     *
+     * @return void
+     */
     public static function init(array $config)
     {
         if (self::$initialized) {
