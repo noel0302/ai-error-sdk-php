@@ -37,7 +37,7 @@ class AIError
      * } $config Configuration array:
      *
      * - projectKey: Required. Your AI Error project key (string)
-     * - env: The environment name ("dev", "stage", "prod", etc.)
+     * - env: The environment name ("dev", "prod")
      * - apiUrl: Required. The API endpoint to send error logs to.
      * - debug: Enable SDK debug logging (true/false)
      *
